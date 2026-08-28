@@ -1,1 +1,68 @@
-body { background-color: blue ; font-family: Arial; } h1 { color: yellow; }
+/* Grundläggande design */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header & Navigering */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-bottom: 4px solid #0066bf; /* BMW Blå */
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e52521; /* BMW M-Röd */
+}
+
+/* Innehållsektioner */
+main {
+    padding: 30px 20px;
+}
+
+.hero img, .about-content img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #1e1e1e;
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0066bf;
+}
+
+a:hover {
+    color: #e52521;
+}
