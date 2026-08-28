@@ -1,72 +1,191 @@
-/* Grundläggande stil för hela webbplatsen */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+/* Nollställning och grundinställningar */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-/* Meny och Sidhuvud */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0f1015;
+    color: #e6e6e6;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidhuvud & Logotyp */
 header {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-bottom: 4px solid #0066bf; /* BMW Blå */
+    background-color: #161822;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e2235;
 }
 
-h1 {
-    margin: 0 0 10px 0;
-    color: #ffffff;
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
     letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
-nav a {
-    color: #cccccc;
+.logo span {
+    color: #e52521; /* M-Röd */
+}
+
+/* Navigeringsknappar i headern */
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    color: #a0a5b5;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.2s ease;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: #e52521; /* BMW M-Röd */
+.nav-btn:hover {
+    color: #ffffff;
+    background-color: #252a3e;
 }
 
-/* Innehåll och Bilder */
+.nav-btn.active {
+    color: #ffffff;
+    background-color: #0066bf; /* BMW Blå */
+}
+
+/* Huvudinnehåll & Kort */
 main {
-    padding: 30px 20px;
+    flex: 1;
+    max-width: 850px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.hero-card, .content-card {
+    background-color: #161822;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #202436;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 25px 0 15px 0;
+}
+
+p {
+    color: #b0b5c0;
+    margin-bottom: 20px;
+}
+
+/* Bilder med snygg ram */
+.image-wrapper {
+    margin: 25px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #2a2f45;
 }
 
 img {
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    margin: 15px 0;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-/* Listor och Länkar */
-ul {
-    list-style-type: none;
+.image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+/* Rutnät för specifikationer */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.spec-box {
+    background-color: #1c2030;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #0066bf;
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-title {
+    font-size: 0.85rem;
+    color: #8a90a0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.spec-value {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Huvudknappar (CTA) */
+.action-area {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e52521;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(229, 37, 33, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #c41e1b;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background-color: #252a3e;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background-color: #323854;
+}
+
+/* Sidfot */
+footer {
+    background-color: #12141d;
+    text-align: center;
     padding: 20px;
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: left;
-    background-color: #1e1e1e;
-    border-radius: 6px;
-    border-left: 3px solid #e52521;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #0066bf;
-}
-
-a:hover {
-    color: #e52521;
+    font-size: 0.85rem;
+    color: #606575;
+    border-top: 1px solid #1a1d2b;
 }
