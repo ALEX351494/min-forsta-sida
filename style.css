@@ -1,4 +1,4 @@
-/* Grundläggande design */
+/* Grundläggande stil för hela webbplatsen */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-/* Header & Navigering */
+/* Meny och Sidhuvud */
 header {
     background-color: #1e1e1e;
     padding: 20px;
@@ -27,32 +27,36 @@ nav a {
     margin: 0 15px;
     font-weight: bold;
     font-size: 1.1rem;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
     color: #e52521; /* BMW M-Röd */
 }
 
-/* Innehållsektioner */
+/* Innehåll och Bilder */
 main {
     padding: 30px 20px;
 }
 
-.hero img, .about-content img {
+img {
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 15px 0;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Listor och Länkar */
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
     max-width: 400px;
     margin: 20px auto;
     text-align: left;
     background-color: #1e1e1e;
-    padding: 15px 25px;
     border-radius: 6px;
+    border-left: 3px solid #e52521;
 }
 
 li {
